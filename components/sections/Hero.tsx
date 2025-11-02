@@ -142,7 +142,7 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <motion.a
-                href="https://drive.google.com/file/d/1JDFHMM3wz98uFEq3_yUM-yfHRP4M9sTz/view"
+                href="https://drive.google.com/file/d/1IFQdjI8-X4ItEPrDV1xkYOfxv92l3Fch/view"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
