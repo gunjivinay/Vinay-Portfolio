@@ -46,7 +46,7 @@ export default function About() {
                 Professional Background
               </h3>
               <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                I'm a <span className="font-semibold text-primary-500">Results-driven Full Stack Developer</span> with proven experience in fintech applications and multi-tenant SaaS platforms. Currently working as a Software Development Engineer Intern at Nexzap, where I've delivered measurable business impact including significant reduction in support queries and performance improvements.
+                I&apos;m a <span className="font-semibold text-primary-500">Results-driven Full Stack Developer</span> with proven experience in fintech applications and multi-tenant SaaS platforms. Currently working as a Software Development Engineer Intern at Nexzap, where I&apos;ve delivered measurable business impact including significant reduction in support queries and performance improvements.
               </p>
               <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
                 Passionate about building scalable, secure solutions that drive user engagement and business growth. I specialize in modern web technologies and have a strong foundation in both frontend and backend development.

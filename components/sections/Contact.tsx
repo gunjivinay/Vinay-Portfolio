@@ -89,7 +89,7 @@ export default function Contact() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-purple-600 mx-auto rounded-full" />
           <p className="mt-4 sm:mt-6 text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-4">
-            Have a project in mind or want to collaborate? Let's connect!
+            Have a project in mind or want to collaborate? Let&apos;s connect!
           </p>
         </motion.div>
 
