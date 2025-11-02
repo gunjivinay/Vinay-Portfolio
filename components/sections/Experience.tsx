@@ -125,7 +125,7 @@ function ExperienceCard({ experience, index, isHovered, onHover, totalExperience
                   {section}
                 </h4>
                 <ul className="space-y-2 ml-4 sm:ml-6">
-                  {points.map((point, pointIndex) => (
+                  {points.map((point: string, pointIndex: number) => (
                     <li key={pointIndex} className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 leading-relaxed flex items-start gap-2">
                       <span className="text-gray-400 dark:text-gray-600 mt-1 flex-shrink-0">•</span>
                       <span>{point}</span>

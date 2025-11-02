@@ -35,7 +35,7 @@ export default function Navigation() {
       const scrollPosition = window.scrollY + 150 // Offset for navbar
 
       for (let i = sections.length - 1; i >= 0; i--) {
-        const section = document.querySelector(`#${sections[i]}`)
+        const section = document.querySelector(`#${sections[i]}`) as HTMLElement
         if (section) {
           const sectionTop = section.getBoundingClientRect().top + window.pageYOffset
           const sectionHeight = section.offsetHeight
