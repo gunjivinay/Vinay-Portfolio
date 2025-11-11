@@ -16,6 +16,7 @@ const skillCategories = {
   'Backend': [
     { name: 'Node.js', icon: '🟢', color: 'from-green-600 to-green-400' },
     { name: 'Express.js', icon: '🚂', color: 'from-gray-800 to-gray-600' },
+    { name: 'MySQL', icon: '🐬', color: 'from-teal-500 to-blue-500' },
     { name: 'PostgreSQL', icon: '🐘', color: 'from-blue-700 to-blue-500' },
     { name: 'Prisma ORM', icon: '🗄️', color: 'from-indigo-600 to-purple-500' },
     { name: 'Java', icon: '☕', color: 'from-orange-600 to-red-600' },
@@ -29,8 +30,17 @@ const skillCategories = {
   'DevOps & Tools': [
     { name: 'Docker', icon: '🐳', color: 'from-blue-500 to-cyan-400' },
     { name: 'Vercel', icon: '▲', color: 'from-black to-gray-800' },
+    { name: 'Netlify', icon: '🌀', color: 'from-emerald-500 to-teal-500' },
+    { name: 'Render', icon: '🚀', color: 'from-purple-500 to-indigo-500' },
+    { name: 'Railway', icon: '🚉', color: 'from-blue-500 to-slate-500' },
     { name: 'Git/GitHub', icon: '🔀', color: 'from-gray-800 to-gray-600' },
     { name: 'VS Code', icon: '💻', color: 'from-blue-600 to-indigo-600' },
+    { name: 'IntelliJ IDEA', icon: '🧠', color: 'from-purple-600 to-blue-600' },
+    { name: 'Eclipse', icon: '🌘', color: 'from-gray-700 to-indigo-700' },
+  ],
+  'Testing & QA': [
+    { name: 'Postman', icon: '📬', color: 'from-orange-500 to-amber-500' },
+    { name: 'Thunder Client', icon: '⚡', color: 'from-purple-500 to-pink-500' },
   ],
   'Cloud & Monitoring': [
     { name: 'AWS', icon: '☁️', color: 'from-orange-500 to-yellow-500' },

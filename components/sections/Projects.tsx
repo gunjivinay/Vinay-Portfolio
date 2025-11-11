@@ -6,6 +6,28 @@ import { ExternalLink, Github, Code } from 'lucide-react'
 
 const projects = [
   {
+    title: 'Full-Stack Todo Platform',
+    description:
+      'Built a production-ready todo management system with Express.js REST APIs, MySQL persistence, and a responsive vanilla JavaScript interface. Configured environment-based endpoints for seamless deployment across cloud targets.',
+    technologies: [
+      'Express.js',
+      'Node.js',
+      'MySQL',
+      'Bootstrap',
+      'JavaScript',
+      'REST API',
+    ],
+    github: 'https://github.com/gunjivinay/Todolist',
+    live: 'https://vinay-checklist.netlify.app/',
+    achievements: [
+      'Streamlined task tracking',
+      '<150ms median API latency',
+      'Zero-downtime Render/Railway deploys',
+      'Prepared statements & env config',
+    ],
+    gradient: 'from-orange-500 to-red-500',
+  },
+  {
     title: 'Multi-Tenant Fintech Voucher Platform',
     description: 'Architected scalable multi-tenant SaaS platform serving multiple clients with role-based access control. Processed high-volume transactions with TimescaleDB optimization. Integrated payment gateways handling significant transaction volume.',
     technologies: ['React.js', 'Next.js', 'Node.js', 'PostgreSQL', 'Stripe', 'Adyen'],
