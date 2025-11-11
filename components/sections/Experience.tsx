@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
@@ -25,7 +26,7 @@ const experiences = [
   {
     title: 'Software Consultant',
     company: 'Nexzap',
-    period: 'Apr 2024 - Nov 2024',
+    period: 'Jun 2024 - Nov 2024',
     summary: 'Contributed to Nexzap\'s early-stage startup setup—laying foundational development systems and kickstarting product development.',
     technologies: ['Startup Engineering', 'React', 'Project Bootstrapping', 'Version Control'],
     details: {
@@ -75,8 +76,8 @@ function ExperienceCard({ experience, index, isHovered, onHover, totalExperience
       >
         {/* Company Logo/Icon */}
         <div className="mb-4">
-          <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-primary-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl">
-            N
+          <div className="relative w-12 h-12 rounded-lg overflow-hidden shadow-lg">
+            <Image src="/logo.png" alt={`${experience.company} logo`} fill className="object-cover" sizes="48px" />
           </div>
         </div>
 
