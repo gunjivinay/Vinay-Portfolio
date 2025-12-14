@@ -157,6 +157,19 @@ export default function Contact() {
                     <Linkedin size={24} />
                   </motion.a>
                   <motion.a
+                    href="https://leetcode.com/u/GunjiVinaykumar/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1, y: -5 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-primary-500 hover:text-white transition-all"
+                    aria-label="LeetCode"
+                  >
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s.357.195.824.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.038-1.901l-2.609-2.636a5.055 5.055 0 0 0-2.445-1.337l2.467-2.503c.516-.514.498-1.365-.037-1.9-.535-.535-1.386-.553-1.899-.039l-4.319 4.38c-.467.467-.702 1.15-.702 1.863s.235 1.357.702 1.824l4.332 4.363c.467.467 1.111.662 1.824.662s1.357-.195 1.823-.662l2.697-2.607c.514-.514 1.365-.497 1.9.038.535.535.553 1.387.038 1.901zM20.811 13.01H10.666c-.702 0-1.27.604-1.27 1.346s.568 1.346 1.27 1.346h10.145c.701 0 1.27-.604 1.27-1.346s-.569-1.346-1.27-1.346z"/>
+                    </svg>
+                  </motion.a>
+                  <motion.a
                     href="https://drive.google.com/file/d/1JDFHMM3wz98uFEq3_yUM-yfHRP4M9sTz/view"
                     target="_blank"
                     rel="noopener noreferrer"

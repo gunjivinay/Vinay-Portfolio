@@ -142,7 +142,7 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <motion.a
-                href="https://drive.google.com/file/d/1IFQdjI8-X4ItEPrDV1xkYOfxv92l3Fch/view"
+                href="https://drive.google.com/file/d/1QCZYPWrpYaYdTItlDQQ_5gRbkfV9x0Te/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -157,10 +157,10 @@ export default function Hero() {
                 onClick={scrollToContact}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-primary-500 text-primary-500 dark:text-primary-400 rounded-full font-semibold text-sm sm:text-base hover:bg-primary-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+                className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-primary-500 text-primary-500 dark:text-primary-400 rounded-full font-semibold text-sm sm:text-base hover:bg-primary-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >
-                <Mail size={18} className="sm:w-5 sm:h-5" />
-                <span>Contact Me</span>
+                <Mail size={18} className="sm:w-5 sm:h-5 group-hover:text-white transition-colors" />
+                <span className="group-hover:text-white transition-colors">Contact Me</span>
               </motion.button>
             </motion.div>
 
@@ -192,6 +192,18 @@ export default function Hero() {
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </motion.a>
+              
+              <motion.a
+                href="https://leetcode.com/u/GunjiVinaykumar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2, y: -5 }}
+                className="text-gray-700 dark:text-gray-300 hover:text-primary-500 transition-colors"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s.357.195.824.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.038-1.901l-2.609-2.636a5.055 5.055 0 0 0-2.445-1.337l2.467-2.503c.516-.514.498-1.365-.037-1.9-.535-.535-1.386-.553-1.899-.039l-4.319 4.38c-.467.467-.702 1.15-.702 1.863s.235 1.357.702 1.824l4.332 4.363c.467.467 1.111.662 1.824.662s1.357-.195 1.823-.662l2.697-2.607c.514-.514 1.365-.497 1.9.038.535.535.553 1.387.038 1.901zM20.811 13.01H10.666c-.702 0-1.27.604-1.27 1.346s.568 1.346 1.27 1.346h10.145c.701 0 1.27-.604 1.27-1.346s-.569-1.346-1.27-1.346z"/>
                 </svg>
               </motion.a>
             </motion.div>

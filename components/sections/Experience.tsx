@@ -7,19 +7,33 @@ import { useInView } from 'react-intersection-observer'
 
 const experiences = [
   {
-    title: 'Software Engineering Intern',
+    title: 'Software Engineering',
     company: 'Nexzap',
-    period: 'Feb 2025 - Present',
+    period: 'Nov 2025 - Present',
     summary: 'Working as an active engineering intern, focusing on customer-facing features, wallet UI, and backend integrations. Contributing to multi-tenant SaaS platform development.',
-    technologies: ['React', 'UI Development', 'Voucher Systems', 'Arcjet Security', 'Performance Optimization', 'Backend Integration', 'Code Review'],
+    technologies: ['Next.js', 'UI Development', 'PostgreSQL', 'Arcjet Security', 'Performance Optimization', 'New Relic', 'Vercel Deployment', 'User Authentication', 'Code Review'],
     details: {
       'Enhancements': [
-        'Enhanced Data Security with user-scope filtering for Analytics modules, eliminating unauthorized access and improving query performance by 40%',
-        'Automated Email Workflow: Designed voucher tracking email templates with dynamic URLs, reducing support queries by 60%',
-        'UI/UX Optimization: Redesigned 6+ admin pages using React.js and Tailwind CSS, achieving 30% reduction in design issues',
-        'Multi-Tenant Architecture: Built scalable tenant isolation system supporting multiple client domains with role-based access control and concurrent user handling',
-        'Payment Integration: Integrated Stripe and Adyen payment gateways with high transaction volume processing and 99.9% uptime',
-        'API Development: Built 20+ RESTful APIs with Swagger documentation, implementing JWT authentication and role-based authorization'
+        '𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞 𝐌𝐢𝐠𝐫𝐚𝐭𝐢𝐨𝐧: Led the critical migration of the application\'s database from NeonDB to a self-hosted PostgreSQL instance using Prisma ORM. This strategic move resolved persistent latency issues and improved overall query performance by 40%.',
+        '𝐀𝐧𝐚𝐥𝐲𝐭𝐢𝐜𝐬 𝐌𝐨𝐝𝐮𝐥𝐞: Designed and implemented a robust Analytics system featuring Sales Reports, User Scope filtering, and Site-based metrics. This empowered the management team with real-time, actionable data.',
+        '𝐒𝐞𝐜𝐮𝐫𝐢𝐭𝐲 𝐄𝐧𝐡𝐚𝐧𝐜𝐞𝐦𝐞𝐧𝐭𝐬: Strengthened application security by implementing granular Role-Based Access Control (RBAC) and removing unauthorized access points in the User Management module.',
+        '𝐁𝐮𝐥𝐤 𝐎𝐩𝐞𝐫𝐚𝐭𝐢𝐨𝐧𝐬: Developed a "Bulk Voucher Activation" feature utilizing database transactions to ensure data integrity while processing thousands of records simultaneously.',
+        '𝐃𝐞𝐯𝐎𝐩𝐬 & 𝐌𝐨𝐧𝐢𝐭𝐨𝐫𝐢𝐧𝐠: Integrated New Relic for full-stack observability, allowing for proactive error detection and resolution. Streamlined deployments using Vercel CLI.',
+      ]
+    }
+  },
+  {
+    title: 'Software Engineering Intern',
+    company: 'Nexzap',
+    period: 'Nov 2024 - Oct 2025',
+    summary: 'Working as an active engineering intern, focusing on customer-facing features, wallet UI, and backend integrations. Contributing to multi-tenant SaaS platform development.',
+    technologies: ['React', 'UI Development', 'Prompt Engineering', 'JSON Web Token (JWT)', 'Performance Optimization', 'MongoDB', 'Code Review'],
+    details: {
+      'Enhancements': [
+        '𝐅𝐫𝐨𝐧𝐭𝐞𝐧𝐝 𝐎𝐩𝐭𝐢𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧: Significantly improved the Homepage load speed by refactoring heavy image grids into optimized text-based layouts and implementing lazy loading strategies.',
+        '𝐅𝐞𝐚𝐭𝐮𝐫𝐞 𝐈𝐦𝐩𝐥𝐞𝐦𝐞𝐧𝐭𝐚𝐭𝐢𝐨𝐧: Developed key user-facing features including "Search & Apply" filters, Order Grouping by timestamp, and dynamic Bar Chart visualizations.',
+        '𝐂𝐨𝐝𝐞 𝐑𝐞𝐟𝐚𝐜𝐭𝐨𝐫𝐢𝐧𝐠: Refactored the VoucherQRScanner and getOrganizationUsers functions to leverage Prisma\'s type-safe queries, reducing runtime errors and improving maintainability.',
+        '𝐔𝐬𝐞𝐫 𝐄𝐧𝐠𝐚𝐠𝐞𝐦𝐞𝐧𝐭: Integrated Resend.js to automate "Order Delivered" emails, providing customers with real-time tracking URLs and enhancing the post-purchase experience.'
       ]
     }
   },
@@ -33,7 +47,10 @@ const experiences = [
       'Foundation': [
         'Contributed to Nexzap\'s early-stage startup setup—laying foundational development systems and kickstarting product development.',
         'Established development workflows and best practices for the team',
-        'Built initial product prototypes and core features'
+        'Built initial product prototypes and core features',
+        '𝐔𝐈/𝐔𝐗 𝐏𝐨𝐥𝐢𝐬𝐡: focused on stabilizing the application\'s frontend. Fixed 30+ UI issues including Drawer alignment, Action Popup positioning, and responsive design glitches.',
+ '𝐈𝐧𝐭𝐞𝐫𝐚𝐜𝐭𝐢𝐯𝐞 𝐄𝐥𝐞𝐦𝐞𝐧𝐭𝐬: Added micro-interactions and animation effects to buttons and transitions, creating a more engaging user experience.',
+ '𝐑𝐚𝐩𝐢𝐝 𝐋𝐞𝐚𝐫𝐧𝐢𝐧𝐠: Quickly adapted to the company\'s folder structure, coding standards, and git workflow, successfully closing 30+ Pull Requests in a short timeframe.'
       ]
     }
   },

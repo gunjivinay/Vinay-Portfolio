@@ -44,6 +44,7 @@ const skillCategories = {
   ],
   'Cloud & Monitoring': [
     { name: 'AWS', icon: '☁️', color: 'from-orange-500 to-yellow-500' },
+    { name: 'Azure', icon: '☁️', color: 'from-blue-500 to-cyan-500' },
     { name: 'New Relic', icon: '📊', color: 'from-orange-500 to-red-500' },
   ],
 }

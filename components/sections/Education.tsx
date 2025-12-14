@@ -31,6 +31,15 @@ const educationHistory: EducationEntry[] = [
     emblem: 'GP',
     gradient: 'from-blue-500 to-cyan-500',
   },
+  {
+    institution: 'Sri Suryodaya High School, Metpally',
+    degree: 'SSC (Secondary School Certificate)',
+    period: 'Sep 2017',
+    description:
+      'Earned a Secondary School Certificate with a focus on Mathematics, Science, Social Studies, and Language.',
+    emblem: 'SSHS',
+    gradient: 'from-green-500 to-cyan-500',
+  },
 ]
 
 function EducationCard({ entry, index }: { entry: EducationEntry; index: number }) {
@@ -42,7 +51,7 @@ function EducationCard({ entry, index }: { entry: EducationEntry; index: number 
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: index * 0.1 }}
-      className="glass rounded-3xl p-6 sm:p-8 md:p-10 space-y-4 border border-white/10 dark:border-white/5 hover:shadow-2xl transition-all duration-300"
+      className="glass rounded-3xl p-6 sm:p-8 md:p-10 space-y-4 border border-gray-200 dark:border-white/10 hover:shadow-2xl transition-all duration-300"
     >
       <div className="flex items-center gap-4 sm:gap-6">
         <div
@@ -76,7 +85,7 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="section-padding bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white"
+      className="section-padding bg-gradient-to-b from-gray-50 via-white to-gray-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 text-gray-900 dark:text-white"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -90,7 +99,7 @@ export default function Education() {
             Education
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-purple-600 mx-auto rounded-full" />
-          <p className="mt-4 sm:mt-6 text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-4">
+          <p className="mt-4 sm:mt-6 text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-4">
             Academic milestones that shaped my technical and analytical problem-solving skills.
           </p>
         </motion.div>

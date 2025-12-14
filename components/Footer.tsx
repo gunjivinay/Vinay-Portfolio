@@ -3,9 +3,16 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react'
 
+const LeetCodeIcon = ({ size = 18 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s.357.195.824.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.038-1.901l-2.609-2.636a5.055 5.055 0 0 0-2.445-1.337l2.467-2.503c.516-.514.498-1.365-.037-1.9-.535-.535-1.386-.553-1.899-.039l-4.319 4.38c-.467.467-.702 1.15-.702 1.863s.235 1.357.702 1.824l4.332 4.363c.467.467 1.111.662 1.824.662s1.357-.195 1.823-.662l2.697-2.607c.514-.514 1.365-.497 1.9.038.535.535.553 1.387.038 1.901zM20.811 13.01H10.666c-.702 0-1.27.604-1.27 1.346s.568 1.346 1.27 1.346h10.145c.701 0 1.27-.604 1.27-1.346s-.569-1.346-1.27-1.346z"/>
+  </svg>
+)
+
 const socialLinks = [
   { icon: <Github size={18} />, href: 'https://github.com/gunjivinay', label: 'GitHub' },
   { icon: <Linkedin size={18} />, href: 'https://www.linkedin.com/in/gunjivinaykumar', label: 'LinkedIn' },
+  { icon: <LeetCodeIcon size={18} />, href: 'https://leetcode.com/u/GunjiVinaykumar/', label: 'LeetCode' },
   { icon: <Mail size={18} />, href: 'mailto:gunjivinaykumar2001@gmail.com', label: 'Email' },
 ]
 
