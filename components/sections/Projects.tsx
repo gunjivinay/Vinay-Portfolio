@@ -1,12 +1,15 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { ExternalLink, Github, Code } from 'lucide-react'
+import { ExternalLink, Github, Code, X } from 'lucide-react'
+import Image from 'next/image'
 
 const projects = [
   {
     title: 'MERN Stack Blog Platform',
+    image: '/projects/blog-platform.png',
     description:
       'A secure, multi-user content management system features a decoupled architecture with a React frontend and Node/Express backend. Implemented robust security with authentication and authorization middleware, while delivering a premium, engagement-focused UI using Tailwind CSS.',
     technologies: [
@@ -51,6 +54,7 @@ const projects = [
   },
   {
     title: 'Multi-Tenant Fintech Voucher Platform',
+    image: '/projects/fintech-platform.png',
     description: 'Architected scalable multi-tenant SaaS platform serving multiple clients with role-based access control. Processed high-volume transactions with TimescaleDB optimization. Integrated payment gateways handling significant transaction volume.',
     technologies: ['React.js', 'Next.js', 'Node.js', 'PostgreSQL', 'Stripe', 'Adyen'],
     github: '',
@@ -60,6 +64,7 @@ const projects = [
   },
   {
     title: 'Weather Application',
+    image: '/projects/weather-app.png',
     description: 'Developed responsive weather app using React.js and OpenWeatherMap API. Real-time updates, AQI metrics, 5-day forecasting with high uptime. Optimized API calls reducing load time by 40%.',
     technologies: ['React.js', 'OpenWeatherMap API', 'CSS3', 'JavaScript'],
     github: 'https://github.com/gunjivinay/Weather-App',
@@ -69,6 +74,7 @@ const projects = [
   },
   {
     title: 'Expense Tracker',
+    image: '/projects/expense-tracker.png',
     description: 'Built a comprehensive expense tracking application with income and expense management. Features include transaction categorization, budget tracking, and financial analytics with local storage persistence.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'LocalStorage'],
     github: 'https://github.com/gunjivinay/Expense-Tracker',
@@ -78,6 +84,7 @@ const projects = [
   },
   {
     title: 'E-commerce Shopping Website',
+    image: '/projects/ecommerce-app.png',
     description: 'Built a clean and structured e-commerce shopping cart interface with product catalog and dynamic cart functionality. Features responsive design, add to cart functionality, and an intuitive user interface for seamless shopping experience.',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     github: 'https://github.com/gunjivinay/E-commerce-Shopping-Website',
@@ -87,7 +94,7 @@ const projects = [
   },
 ]
 
-function ProjectCard({ project, index }: { project: typeof projects[0]; index: number }) {
+function ProjectCard({ project, index, onImageClick }: { project: typeof projects[0]; index: number; onImageClick: (img: string) => void }) {
   const [ref, inView] = useInView({ threshold: 0.3, triggerOnce: true })
 
   return (
@@ -102,12 +109,32 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
       <div className="glass rounded-2xl p-6 sm:p-8 h-full flex flex-col hover:shadow-2xl transition-all duration-300">
         {/* Gradient Accent */}
         <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${project.gradient} rounded-t-2xl`} />
-        
+
         <div className="space-y-4 flex-1">
-          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white group-hover:text-primary-500 transition-colors">
-            {project.title}
-          </h3>
-          
+          <div className="flex justify-between items-start gap-4">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white group-hover:text-primary-500 transition-colors">
+              {project.title}
+            </h3>
+            {project.image && (
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={(e) => {
+                  e.stopPropagation()
+                  project.image && onImageClick(project.image)
+                }}
+                className="relative w-24 h-16 sm:w-28 sm:h-20 flex-shrink-0 rounded-lg overflow-hidden cursor-pointer border-2 border-gray-100 dark:border-gray-800 hover:border-primary-500 dark:hover:border-primary-500 transition-colors"
+              >
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
+              </motion.div>
+            )}
+          </div>
+
           <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
             {project.description}
           </p>
@@ -169,6 +196,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
 
 export default function Projects() {
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true })
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   return (
     <section
@@ -194,10 +222,51 @@ export default function Projects() {
 
         <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
-            <ProjectCard key={project.title} project={project} index={index} />
+            <ProjectCard
+              key={project.title}
+              project={project}
+              index={index}
+              onImageClick={setSelectedImage}
+            />
           ))}
         </div>
       </div>
+
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="relative max-w-5xl w-full max-h-[90vh] rounded-2xl overflow-hidden bg-gray-900 shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/50 text-white hover:bg-white hover:text-black transition-colors"
+              >
+                <X size={24} />
+              </button>
+              <div className="relative aspect-video w-full">
+                <Image
+                  src={selectedImage}
+                  alt="Project Preview"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   )
 }
