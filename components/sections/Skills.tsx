@@ -12,10 +12,12 @@ const skillCategories = {
     { name: 'HTML5', icon: '🌐', color: 'from-orange-500 to-red-500' },
     { name: 'CSS3', icon: '💎', color: 'from-blue-500 to-indigo-500' },
     { name: 'JavaScript', icon: '📜', color: 'from-yellow-500 to-orange-500' },
+    { name: 'Axios', icon: '📡', color: 'from-blue-600 to-purple-600' },
   ],
   'Backend': [
     { name: 'Node.js', icon: '🟢', color: 'from-green-600 to-green-400' },
     { name: 'Express.js', icon: '🚂', color: 'from-gray-800 to-gray-600' },
+    { name: 'MongoDB', icon: '🍃', color: 'from-green-500 to-emerald-600' },
     { name: 'MySQL', icon: '🐬', color: 'from-teal-500 to-blue-500' },
     { name: 'PostgreSQL', icon: '🐘', color: 'from-blue-700 to-blue-500' },
     { name: 'Prisma ORM', icon: '🗄️', color: 'from-indigo-600 to-purple-500' },
@@ -67,7 +69,7 @@ function SkillBadge({ skill, index }: { skill: { name: string; icon: string; col
           {skill.name}
         </h4>
       </div>
-      
+
       {/* Hover Glow Effect */}
       <motion.div
         className={`absolute inset-0 bg-gradient-to-r ${skill.color} opacity-0 group-hover:opacity-20 rounded-xl blur-xl -z-10`}

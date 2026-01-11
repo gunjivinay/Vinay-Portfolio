@@ -40,7 +40,7 @@ export default function Navigation() {
         if (section) {
           const sectionTop = section.getBoundingClientRect().top + window.pageYOffset
           const sectionHeight = section.offsetHeight
-          
+
           if (scrollPosition >= sectionTop - 100 && scrollPosition < sectionTop + sectionHeight - 100) {
             setActiveSection(sections[i])
             break
@@ -56,39 +56,35 @@ export default function Navigation() {
 
     window.addEventListener('scroll', handleScrollSpy)
     handleScrollSpy() // Initial check
-    
+
     return () => window.removeEventListener('scroll', handleScrollSpy)
   }, [])
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, href: string) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
     setIsMobileMenuOpen(false)
-    
-    // Wait a bit for mobile menu to close if needed
-    setTimeout(() => {
-      const element = document.querySelector(href)
-      if (element) {
-        const offset = 80 // Account for fixed navbar height
-        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
-        const offsetPosition = elementPosition - offset
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        })
-      }
-    }, 100)
+    const element = document.querySelector(href)
+    if (element) {
+      const offset = 80 // Account for fixed navbar height
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+      const offsetPosition = elementPosition - offset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
+    }
   }
 
   return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg'
-          : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg'
+        : 'bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -98,8 +94,8 @@ export default function Navigation() {
             whileTap={{ scale: 0.95 }}
             className="text-2xl font-bold bg-gradient-to-r from-primary-500 to-purple-600 bg-clip-text text-transparent"
           >
-            <Link 
-              href="#home" 
+            <Link
+              href="#home"
               onClick={(e) => handleNavClick(e, '#home')}
               className="cursor-pointer"
             >
@@ -113,15 +109,14 @@ export default function Navigation() {
               const sectionId = item.href.substring(1) // Remove #
               const isActive = activeSection === sectionId
               return (
-                <motion.button
+                <Link
                   key={item.name}
-                  whileHover={{ y: -2 }}
+                  href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className={`relative font-medium cursor-pointer transition-colors ${
-                    isActive
-                      ? 'text-primary-500 dark:text-primary-400'
-                      : 'text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400'
-                  }`}
+                  className={`relative font-medium cursor-pointer transition-colors hover:-translate-y-0.5 transition-transform duration-200 ${isActive
+                    ? 'text-primary-500 dark:text-primary-400'
+                    : 'text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400'
+                    }`}
                 >
                   {item.name}
                   {isActive && (
@@ -132,7 +127,7 @@ export default function Navigation() {
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
-                </motion.button>
+                </Link>
               )
             })}
             <motion.button
@@ -179,18 +174,17 @@ export default function Navigation() {
                 const sectionId = item.href.substring(1) // Remove #
                 const isActive = activeSection === sectionId
                 return (
-                  <motion.button
+                  <Link
                     key={item.name}
-                    whileHover={{ x: 10 }}
+                    href={item.href}
                     onClick={(e) => handleNavClick(e, item.href)}
-                    className={`block w-full text-left px-4 py-2 rounded-lg transition-colors cursor-pointer ${
-                      isActive
-                        ? 'bg-primary-500/10 dark:bg-primary-500/20 text-primary-500 dark:text-primary-400 font-semibold'
-                        : 'text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 hover:bg-gray-100 dark:hover:bg-gray-800'
-                    }`}
+                    className={`block w-full text-left px-4 py-2 rounded-lg transition-colors cursor-pointer ${isActive
+                      ? 'bg-primary-500/10 dark:bg-primary-500/20 text-primary-500 dark:text-primary-400 font-semibold'
+                      : 'text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 hover:bg-gray-100 dark:hover:bg-gray-800'
+                      }`}
                   >
                     {item.name}
-                  </motion.button>
+                  </Link>
                 )
               })}
             </div>
