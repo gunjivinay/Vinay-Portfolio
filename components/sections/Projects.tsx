@@ -31,6 +31,29 @@ const projects = [
     gradient: 'from-emerald-500 to-teal-600',
   },
   {
+    title: 'VDMR Dynamics 365 Platform',
+    image: '/projects/vdmr-platform.png',
+    description:
+      'A custom static site for a Microsoft Dynamics 365 expert, replacing a heavy CMS with a high-performance React/Vite solution. Features a professional design with Warm Orange & Slate Grey palette, Framer Motion scroll reveals, and a lightweight production build.',
+    technologies: [
+      'React',
+      'Tailwind CSS',
+      'Framer Motion',
+      'Vite',
+    ],
+    github: '',
+    live: 'https://www.vdmrptyltd.com/',
+    achievements: [
+      'Performance First',
+      'Dynamic Hero Section',
+      'Service Highlights',
+      'Trust Signals',
+    ],
+    quote: 'Fully satisfied with the website and the work. The professional look and smooth feel of the application are exactly what we needed.',
+    client: 'Mani Deepak',
+    gradient: 'from-orange-500 to-slate-600',
+  },
+  {
     title: 'Modern Real Estate Booking System',
     image: '/projects/real-estate-booking.png',
     description:
@@ -94,7 +117,7 @@ const projects = [
   },
 ]
 
-function ProjectCard({ project, index, onImageClick }: { project: typeof projects[0]; index: number; onImageClick: (img: string) => void }) {
+function ProjectCard({ project, index, onImageClick }: { project: typeof projects[number]; index: number; onImageClick: (img: string) => void }) {
   const [ref, inView] = useInView({ threshold: 0.3, triggerOnce: true })
 
   return (
@@ -139,6 +162,14 @@ function ProjectCard({ project, index, onImageClick }: { project: typeof project
             {project.description}
           </p>
 
+          {/* Client Testimonial */}
+          {'quote' in project && project.quote && (
+            <div className="bg-primary-50 dark:bg-primary-900/10 border-l-4 border-primary-500 p-3 my-4 rounded-r-lg">
+              <p className="italic text-gray-700 dark:text-gray-300 text-sm">"{project.quote}"</p>
+              <p className="text-xs font-bold text-gray-900 dark:text-white mt-2">- {project['client']}</p>
+            </div>
+          )}
+
           {/* Achievements */}
           <div className="flex flex-wrap gap-2">
             {project.achievements.map((achievement, i) => (
@@ -177,17 +208,19 @@ function ProjectCard({ project, index, onImageClick }: { project: typeof project
             <ExternalLink size={18} />
             Live Demo
           </motion.a>
-          <motion.a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center justify-center gap-2 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-semibold hover:border-primary-500 hover:text-primary-500 transition-all"
-          >
-            <Github size={18} />
-            Code
-          </motion.a>
+          {project.github && (
+            <motion.a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center justify-center gap-2 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-semibold hover:border-primary-500 hover:text-primary-500 transition-all"
+            >
+              <Github size={18} />
+              Code
+            </motion.a>
+          )}
         </div>
       </div>
     </motion.div>
