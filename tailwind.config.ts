@@ -32,6 +32,7 @@ const config: Config = {
         'gradient': 'gradient 15s ease infinite',
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
+        'shine': 'shine 3s linear infinite',
       },
       keyframes: {
         gradient: {
@@ -43,6 +44,10 @@ const config: Config = {
             'background-size': '200% 200%',
             'background-position': 'right center'
           },
+        },
+        shine: {
+          '0%': { backgroundPosition: '0% center' },
+          '100%': { backgroundPosition: '200% center' },
         },
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
