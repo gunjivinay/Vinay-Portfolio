@@ -165,7 +165,7 @@ function ProjectCard({ project, index, onImageClick }: { project: typeof project
           {/* Client Testimonial */}
           {'quote' in project && project.quote && (
             <div className="bg-primary-50 dark:bg-primary-900/10 border-l-4 border-primary-500 p-3 my-4 rounded-r-lg">
-              <p className="italic text-gray-700 dark:text-gray-300 text-sm">"{project.quote}"</p>
+              <p className="italic text-gray-700 dark:text-gray-300 text-sm">&quot;{project.quote}&quot;</p>
               <p className="text-xs font-bold text-gray-900 dark:text-white mt-2">- {project['client']}</p>
             </div>
           )}
