@@ -6,6 +6,28 @@ import { ExternalLink, Github, Code } from 'lucide-react'
 
 const projects = [
   {
+    title: 'MERN Stack Blog Platform',
+    description:
+      'A secure, multi-user content management system features a decoupled architecture with a React frontend and Node/Express backend. Implemented robust security with authentication and authorization middleware, while delivering a premium, engagement-focused UI using Tailwind CSS.',
+    technologies: [
+      'React',
+      'Tailwind CSS',
+      'Axios',
+      'Node.js',
+      'Express',
+      'MongoDB Atlas',
+    ],
+    github: 'https://github.com/gunjivinay/Blog-App',
+    live: 'https://vinay-blog-app.netlify.app/',
+    achievements: [
+      'Secure Auth & Authorization',
+      'Decoupled Architecture',
+      'Premium UI/UX',
+      'Scalable Backend',
+    ],
+    gradient: 'from-emerald-500 to-teal-600',
+  },
+  {
     title: 'Full-Stack Todo Platform',
     description:
       'Built a production-ready todo management system with Express.js REST APIs, MySQL persistence, and a responsive vanilla JavaScript interface. Configured environment-based endpoints for seamless deployment across cloud targets.',
