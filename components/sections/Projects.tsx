@@ -8,6 +8,16 @@ import Image from 'next/image'
 
 const projects = [
   {
+    title: 'Multi-Tenant Fintech Voucher Platform',
+    image: '/projects/fintech-platform.png',
+    description: 'Architected scalable multi-tenant SaaS platform serving multiple clients with role-based access control. Processed high-volume transactions with TimescaleDB optimization. Integrated payment gateways handling significant transaction volume.',
+    technologies: ['React.js', 'Next.js', 'Node.js', 'PostgreSQL', 'Stripe', 'Adyen', 'New Relic', 'Vercel Deployment', 'Git', 'Github'],
+    github: '',
+    live: 'https://nexzap.com/',
+    achievements: ['Reduced support tickets by 60%', '99.9% uptime', 'Scalable architecture'],
+    gradient: 'from-blue-500 to-purple-600',
+  },
+  {
     title: 'MERN Stack Blog Platform',
     image: '/projects/blog-platform.png',
     description:
@@ -74,46 +84,6 @@ const projects = [
       'Interactive Design',
     ],
     gradient: 'from-yellow-500 to-amber-600',
-  },
-  {
-    title: 'Multi-Tenant Fintech Voucher Platform',
-    image: '/projects/fintech-platform.png',
-    description: 'Architected scalable multi-tenant SaaS platform serving multiple clients with role-based access control. Processed high-volume transactions with TimescaleDB optimization. Integrated payment gateways handling significant transaction volume.',
-    technologies: ['React.js', 'Next.js', 'Node.js', 'PostgreSQL', 'Stripe', 'Adyen'],
-    github: '',
-    live: 'https://nexzap.com/',
-    achievements: ['Reduced support tickets by 60%', '99.9% uptime', 'Scalable architecture'],
-    gradient: 'from-blue-500 to-purple-600',
-  },
-  {
-    title: 'Weather Application',
-    image: '/projects/weather-app.png',
-    description: 'Developed responsive weather app using React.js and OpenWeatherMap API. Real-time updates, AQI metrics, 5-day forecasting with high uptime. Optimized API calls reducing load time by 40%.',
-    technologies: ['React.js', 'OpenWeatherMap API', 'CSS3', 'JavaScript'],
-    github: 'https://github.com/gunjivinay/Weather-App',
-    live: 'https://weather-app-beta-vert-70.vercel.app/',
-    achievements: ['40% faster load time', 'Real-time updates', 'AQI metrics'],
-    gradient: 'from-green-500 to-blue-600',
-  },
-  {
-    title: 'Expense Tracker',
-    image: '/projects/expense-tracker.png',
-    description: 'Built a comprehensive expense tracking application with income and expense management. Features include transaction categorization, budget tracking, and financial analytics with local storage persistence.',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'LocalStorage'],
-    github: 'https://github.com/gunjivinay/Expense-Tracker',
-    live: 'https://expense-tracker-ebon-zeta.vercel.app/',
-    achievements: ['Budget tracking', 'Transaction categorization', 'Local storage'],
-    gradient: 'from-purple-500 to-pink-600',
-  },
-  {
-    title: 'E-commerce Shopping Website',
-    image: '/projects/ecommerce-app.png',
-    description: 'Built a clean and structured e-commerce shopping cart interface with product catalog and dynamic cart functionality. Features responsive design, add to cart functionality, and an intuitive user interface for seamless shopping experience.',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    github: 'https://github.com/gunjivinay/E-commerce-Shopping-Website',
-    live: 'https://e-commerce-shopping-website-dun.vercel.app/',
-    achievements: ['Responsive design', 'Dynamic cart', 'Clean UI/UX'],
-    gradient: 'from-indigo-500 to-purple-600',
   },
 ]
 

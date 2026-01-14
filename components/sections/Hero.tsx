@@ -52,7 +52,7 @@ function Typewriter({ texts, speed = 100, delay = 2000 }: { texts: TextConfig[];
   const currentTextConfig = texts[currentTextIndex]
 
   return (
-    <span className={`bg-gradient-to-r ${currentTextConfig.color} bg-clip-text text-transparent`}>
+    <span className={`bg-gradient-to-r ${currentTextConfig.color} bg-clip-text text-transparent pb-1`}>
       {displayText}<span className="animate-pulse text-gray-700 dark:text-gray-300">|</span>
     </span>
   )
@@ -110,7 +110,7 @@ export default function Hero() {
                   Hi, I&apos;m
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-[#6366f1] via-[#a5b4fc] to-[#6366f1] bg-clip-text text-transparent bg-[length:200%_auto] animate-shine">
+                <span className="bg-gradient-to-r from-[#6366f1] via-[#a5b4fc] to-[#6366f1] bg-clip-text text-transparent bg-[length:200%_auto] animate-shine pb-2">
                   Gunji Vinaykumar
                 </span>
               </h1>
@@ -142,7 +142,7 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <motion.a
-                href="https://drive.google.com/file/d/1LmEJJ8op-MXpNP5XTcouEW3iJYvqYCIC/view?usp=sharing"
+                href="https://drive.google.com/file/d/1-TN4_42jMO0hgz-e7MY8mjNCjYrTcGO7/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
